@@ -1,0 +1,682 @@
+|regfile
+clk => reg8:reg0.clk
+clk => reg8:reg1.clk
+clk => reg8:reg2.clk
+clk => reg8:reg3.clk
+W[0] => reg8:reg0.D[0]
+W[0] => reg8:reg1.D[0]
+W[0] => reg8:reg2.D[0]
+W[0] => reg8:reg3.D[0]
+W[1] => reg8:reg0.D[1]
+W[1] => reg8:reg1.D[1]
+W[1] => reg8:reg2.D[1]
+W[1] => reg8:reg3.D[1]
+W[2] => reg8:reg0.D[2]
+W[2] => reg8:reg1.D[2]
+W[2] => reg8:reg2.D[2]
+W[2] => reg8:reg3.D[2]
+W[3] => reg8:reg0.D[3]
+W[3] => reg8:reg1.D[3]
+W[3] => reg8:reg2.D[3]
+W[3] => reg8:reg3.D[3]
+W[4] => reg8:reg0.D[4]
+W[4] => reg8:reg1.D[4]
+W[4] => reg8:reg2.D[4]
+W[4] => reg8:reg3.D[4]
+W[5] => reg8:reg0.D[5]
+W[5] => reg8:reg1.D[5]
+W[5] => reg8:reg2.D[5]
+W[5] => reg8:reg3.D[5]
+W[6] => reg8:reg0.D[6]
+W[6] => reg8:reg1.D[6]
+W[6] => reg8:reg2.D[6]
+W[6] => reg8:reg3.D[6]
+W[7] => reg8:reg0.D[7]
+W[7] => reg8:reg1.D[7]
+W[7] => reg8:reg2.D[7]
+W[7] => reg8:reg3.D[7]
+W_addr[0] => decode4:deco0.I[0]
+W_addr[1] => decode4:deco0.I[1]
+W_en => decode4:deco0.en
+R_data[0] <= mux4x1:muxRead.Z[0]
+R_data[1] <= mux4x1:muxRead.Z[1]
+R_data[2] <= mux4x1:muxRead.Z[2]
+R_data[3] <= mux4x1:muxRead.Z[3]
+R_data[4] <= mux4x1:muxRead.Z[4]
+R_data[5] <= mux4x1:muxRead.Z[5]
+R_data[6] <= mux4x1:muxRead.Z[6]
+R_data[7] <= mux4x1:muxRead.Z[7]
+R_addr[0] => mux4x1:muxRead.S[0]
+R_addr[1] => mux4x1:muxRead.S[1]
+
+
+|regfile|decode4:deco0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN0
+I[1] => Q.IN0
+en => Q.IN1
+en => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0
+clk => flip_flop:flip0.CLK
+clk => flip_flop:flip1.CLK
+clk => flip_flop:flip2.CLK
+clk => flip_flop:flip3.CLK
+clk => flip_flop:flip4.CLK
+clk => flip_flop:flip5.CLK
+clk => flip_flop:flip6.CLK
+clk => flip_flop:flip7.CLK
+ld => mux2x1:mux0.Sel
+ld => mux2x1:mux1.Sel
+ld => mux2x1:mux2.Sel
+ld => mux2x1:mux3.Sel
+ld => mux2x1:mux4.Sel
+ld => mux2x1:mux5.Sel
+ld => mux2x1:mux6.Sel
+ld => mux2x1:mux7.Sel
+D[0] => mux2x1:mux0.B
+D[1] => mux2x1:mux1.B
+D[2] => mux2x1:mux2.B
+D[3] => mux2x1:mux3.B
+D[4] => mux2x1:mux4.B
+D[5] => mux2x1:mux5.B
+D[6] => mux2x1:mux6.B
+D[7] => mux2x1:mux7.B
+Q[0] <= flip_flop:flip0.Q
+Q[1] <= flip_flop:flip1.Q
+Q[2] <= flip_flop:flip2.Q
+Q[3] <= flip_flop:flip3.Q
+Q[4] <= flip_flop:flip4.Q
+Q[5] <= flip_flop:flip5.Q
+Q[6] <= flip_flop:flip6.Q
+Q[7] <= flip_flop:flip7.Q
+
+
+|regfile|reg8:reg0|mux2x1:mux0
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux1
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux2
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux3
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux4
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux5
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux6
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|mux2x1:mux7
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip0
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip1
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip2
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip3
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip4
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip5
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip6
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg0|flip_flop:flip7
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1
+clk => flip_flop:flip0.CLK
+clk => flip_flop:flip1.CLK
+clk => flip_flop:flip2.CLK
+clk => flip_flop:flip3.CLK
+clk => flip_flop:flip4.CLK
+clk => flip_flop:flip5.CLK
+clk => flip_flop:flip6.CLK
+clk => flip_flop:flip7.CLK
+ld => mux2x1:mux0.Sel
+ld => mux2x1:mux1.Sel
+ld => mux2x1:mux2.Sel
+ld => mux2x1:mux3.Sel
+ld => mux2x1:mux4.Sel
+ld => mux2x1:mux5.Sel
+ld => mux2x1:mux6.Sel
+ld => mux2x1:mux7.Sel
+D[0] => mux2x1:mux0.B
+D[1] => mux2x1:mux1.B
+D[2] => mux2x1:mux2.B
+D[3] => mux2x1:mux3.B
+D[4] => mux2x1:mux4.B
+D[5] => mux2x1:mux5.B
+D[6] => mux2x1:mux6.B
+D[7] => mux2x1:mux7.B
+Q[0] <= flip_flop:flip0.Q
+Q[1] <= flip_flop:flip1.Q
+Q[2] <= flip_flop:flip2.Q
+Q[3] <= flip_flop:flip3.Q
+Q[4] <= flip_flop:flip4.Q
+Q[5] <= flip_flop:flip5.Q
+Q[6] <= flip_flop:flip6.Q
+Q[7] <= flip_flop:flip7.Q
+
+
+|regfile|reg8:reg1|mux2x1:mux0
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux1
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux2
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux3
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux4
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux5
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux6
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|mux2x1:mux7
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip0
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip1
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip2
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip3
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip4
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip5
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip6
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg1|flip_flop:flip7
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2
+clk => flip_flop:flip0.CLK
+clk => flip_flop:flip1.CLK
+clk => flip_flop:flip2.CLK
+clk => flip_flop:flip3.CLK
+clk => flip_flop:flip4.CLK
+clk => flip_flop:flip5.CLK
+clk => flip_flop:flip6.CLK
+clk => flip_flop:flip7.CLK
+ld => mux2x1:mux0.Sel
+ld => mux2x1:mux1.Sel
+ld => mux2x1:mux2.Sel
+ld => mux2x1:mux3.Sel
+ld => mux2x1:mux4.Sel
+ld => mux2x1:mux5.Sel
+ld => mux2x1:mux6.Sel
+ld => mux2x1:mux7.Sel
+D[0] => mux2x1:mux0.B
+D[1] => mux2x1:mux1.B
+D[2] => mux2x1:mux2.B
+D[3] => mux2x1:mux3.B
+D[4] => mux2x1:mux4.B
+D[5] => mux2x1:mux5.B
+D[6] => mux2x1:mux6.B
+D[7] => mux2x1:mux7.B
+Q[0] <= flip_flop:flip0.Q
+Q[1] <= flip_flop:flip1.Q
+Q[2] <= flip_flop:flip2.Q
+Q[3] <= flip_flop:flip3.Q
+Q[4] <= flip_flop:flip4.Q
+Q[5] <= flip_flop:flip5.Q
+Q[6] <= flip_flop:flip6.Q
+Q[7] <= flip_flop:flip7.Q
+
+
+|regfile|reg8:reg2|mux2x1:mux0
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux1
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux2
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux3
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux4
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux5
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux6
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|mux2x1:mux7
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip0
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip1
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip2
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip3
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip4
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip5
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip6
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg2|flip_flop:flip7
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3
+clk => flip_flop:flip0.CLK
+clk => flip_flop:flip1.CLK
+clk => flip_flop:flip2.CLK
+clk => flip_flop:flip3.CLK
+clk => flip_flop:flip4.CLK
+clk => flip_flop:flip5.CLK
+clk => flip_flop:flip6.CLK
+clk => flip_flop:flip7.CLK
+ld => mux2x1:mux0.Sel
+ld => mux2x1:mux1.Sel
+ld => mux2x1:mux2.Sel
+ld => mux2x1:mux3.Sel
+ld => mux2x1:mux4.Sel
+ld => mux2x1:mux5.Sel
+ld => mux2x1:mux6.Sel
+ld => mux2x1:mux7.Sel
+D[0] => mux2x1:mux0.B
+D[1] => mux2x1:mux1.B
+D[2] => mux2x1:mux2.B
+D[3] => mux2x1:mux3.B
+D[4] => mux2x1:mux4.B
+D[5] => mux2x1:mux5.B
+D[6] => mux2x1:mux6.B
+D[7] => mux2x1:mux7.B
+Q[0] <= flip_flop:flip0.Q
+Q[1] <= flip_flop:flip1.Q
+Q[2] <= flip_flop:flip2.Q
+Q[3] <= flip_flop:flip3.Q
+Q[4] <= flip_flop:flip4.Q
+Q[5] <= flip_flop:flip5.Q
+Q[6] <= flip_flop:flip6.Q
+Q[7] <= flip_flop:flip7.Q
+
+
+|regfile|reg8:reg3|mux2x1:mux0
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux1
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux2
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux3
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux4
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux5
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux6
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|mux2x1:mux7
+A => Y.DATAB
+B => Y.DATAA
+Sel => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip0
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip1
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip2
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip3
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip4
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip5
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip6
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|reg8:reg3|flip_flop:flip7
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regfile|mux4x1:muxRead
+A[0][0] => Mux7.IN3
+A[0][1] => Mux6.IN3
+A[0][2] => Mux5.IN3
+A[0][3] => Mux4.IN3
+A[0][4] => Mux3.IN3
+A[0][5] => Mux2.IN3
+A[0][6] => Mux1.IN3
+A[0][7] => Mux0.IN3
+A[1][0] => Mux7.IN2
+A[1][1] => Mux6.IN2
+A[1][2] => Mux5.IN2
+A[1][3] => Mux4.IN2
+A[1][4] => Mux3.IN2
+A[1][5] => Mux2.IN2
+A[1][6] => Mux1.IN2
+A[1][7] => Mux0.IN2
+A[2][0] => Mux7.IN1
+A[2][1] => Mux6.IN1
+A[2][2] => Mux5.IN1
+A[2][3] => Mux4.IN1
+A[2][4] => Mux3.IN1
+A[2][5] => Mux2.IN1
+A[2][6] => Mux1.IN1
+A[2][7] => Mux0.IN1
+A[3][0] => Mux7.IN0
+A[3][1] => Mux6.IN0
+A[3][2] => Mux5.IN0
+A[3][3] => Mux4.IN0
+A[3][4] => Mux3.IN0
+A[3][5] => Mux2.IN0
+A[3][6] => Mux1.IN0
+A[3][7] => Mux0.IN0
+S[0] => Mux0.IN5
+S[0] => Mux1.IN5
+S[0] => Mux2.IN5
+S[0] => Mux3.IN5
+S[0] => Mux4.IN5
+S[0] => Mux5.IN5
+S[0] => Mux6.IN5
+S[0] => Mux7.IN5
+S[1] => Mux0.IN4
+S[1] => Mux1.IN4
+S[1] => Mux2.IN4
+S[1] => Mux3.IN4
+S[1] => Mux4.IN4
+S[1] => Mux5.IN4
+S[1] => Mux6.IN4
+S[1] => Mux7.IN4
+Z[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
